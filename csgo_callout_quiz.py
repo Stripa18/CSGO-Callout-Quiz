@@ -29,6 +29,8 @@ if input() == "shadows":
         if input() == "truck":
             print("Correct! Good job!")
             score += 1
+        else:
+            print("That is not the right answer. Try again.")
     else:
         print("Wrong. Try again.")
 else:
