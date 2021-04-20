@@ -52,4 +52,18 @@ if input() in answer3:
     score += 1
 else:
 	print("That is not the right answer.")
-	score -= 1
+    score -= 1
+ time.sleep(2)
+print("From the Terrorist spawn, If you go to B from the right instead of going through middle, you enter a building that connects Terrorist spawn and Side Alley, there is a spot to hide there in case you know an enemy is gonna come. How is that callout called?")
+if input() in answer4:
+    print("Wow! Nice knowledge. You are good at this!")
+    score += 2
+else:
+    print("That is wrong.")
+# End of the quiz, there WILL be more questions and answers above though, this is just for the future.
+time.sleep(1)
+print("Good job on doing the quiz! Here is your final score...")
+time.sleep(3)
+print(score + " !")
+if score <= 0:
+    print("Yikes, you didn't do very well... You don't have a rank yet. Try again and practice more!")
