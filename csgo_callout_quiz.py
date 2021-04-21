@@ -51,9 +51,9 @@ if input() in answer3:
     print("Correct! Good job!")
     score += 1
 else:
-	print("That is not the right answer.")
+    print("That is not the right answer.")
     score -= 1
- time.sleep(2)
+time.sleep(2)
 print("From the Terrorist spawn, If you go to B from the right instead of going through middle, you enter a building that connects Terrorist spawn and Side Alley, there is a spot to hide there in case you know an enemy is gonna come. How is that callout called?")
 if input() in answer4:
     print("Wow! Nice knowledge. You are good at this!")
