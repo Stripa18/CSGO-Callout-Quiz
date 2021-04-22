@@ -10,12 +10,13 @@ answer1 = ['shadows', 'shadow', 'dark']
 answer2 = ['ticket', 'ticket booth']
 answer3 = ['truck', 'van', 'car']
 answer4 = ['tv', 'TV']
+answer5 = ['jungle', 'Jungle', 'JUNGLE']
 print("Welcome to the Callouts Quiz!")
 time.sleep(1)
 print("All answers must be entered in lowercase.")
 time.sleep(2)
 print("We are playing on Mirage.")
-time.sleep(2)
+time.sleep(3)
 print("After entering the A bombsite from ramp, to the left we have the other entrance which is in a higher ground, there is a ladder leading down, what is the name of the callout for the place that is under the ladder?")
 if input() in answer1:
     print("That's correct!")
@@ -43,16 +44,6 @@ if input() in answer3:
 else:
 	print("Wrong...")
 	score -= 1
-time.sleep(1)
-print("You're doing good. The next callout is...")
-time.sleep(2)
-print("In the B bombsite, in the top right corner when coming from the back, there is a vehicle right in front of apartments, Counter-Terrorist and Terrorist often hide there from the opposite team or CTs use It to go to apartments. How is that area called?")
-if input() in answer3:
-    print("Correct! Good job!")
-    score += 1
-else:
-    print("That is not the right answer.")
-    score -= 1
 time.sleep(2)
 print("From the Terrorist spawn, If you go to B from the right instead of going through middle, you enter a building that connects Terrorist spawn and Side Alley, there is a spot to hide there in case you know an enemy is gonna come. How is that callout called?")
 if input() in answer4:
@@ -60,6 +51,17 @@ if input() in answer4:
     score += 2
 else:
     print("That is wrong.")
+time.sleep(2)
+print("Let's get on with the quiz.")
+time.sleep(1)
+print("This is an easy one.")
+time.sleep(2)
+print("Coming from Sniper's Nest/Window to the A bombsite, how is that callout called?")
+if input() in answer5:
+    print("Good!")
+    score += 1
+else:
+    print("Come on, that was an easy one!")
 # End of the quiz, there WILL be more questions and answers above though, this is just for the future.
 time.sleep(1)
 print("Good job on doing the quiz! Here is your final score...")
