@@ -1,5 +1,5 @@
-# Counter-Strike-Global-Offensive-Callout-Quiz
-Quiz based on the 2013 videogame Counter-Strike: Global Offensive made by Valve.
+# Counter-Strike: Global-Offensive Callout Quiz
+Quiz based on the 2012 videogame Counter-Strike: Global Offensive made by Valve.
  The videogame is a competitive first-person shooter which has different maps, all of which have strategical spots players can be positioned in.
  Callouts are used to define these spots and to *call out* an enemy's position so that the team can attack and defeat that player.
  In the quiz, a spot will be described, and the user must enter the name of the callout in lowercase.
