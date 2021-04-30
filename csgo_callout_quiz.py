@@ -6,11 +6,15 @@
 # In the quiz, a spot will be described, and the user must enter the name of the callout in lowercase.
 import time
 score = 0
-answer1 = ['shadows', 'shadow', 'dark']
-answer2 = ['ticket', 'ticket booth']
-answer3 = ['truck', 'van', 'car']
-answer4 = ['tv', 'TV']
+show_tip_end = False
+answer1 = ['shadows', 'shadow', 'dark', 'Shadows', 'SHADOWS', 'Shadow', 'SHADOW', 'Dark', 'DARK']
+answer2 = ['ticket', 'ticket booth', 'Ticket', 'TICKET', 'Ticket booth', 'Ticket Booth', 'TICKET BOOTH']
+answer3 = ['truck', 'van', 'car', 'Truck', 'TRUCK', 'Van', 'VAN', 'Car', 'CAR']
+answer4 = ['tv', 'TV', 'Tv']
 answer5 = ['jungle', 'Jungle', 'JUNGLE']
+answer6 = ['sneaky', 'Sneaky', 'SNEAKY']
+yes = ['yes', 'Yes', 'YES', 'ye', 'Ye', 'YE', 'Y', 'y', 'sure', 'Sure', 'SURE', 'Yep', 'yep', 'YEP']
+no = ['no', 'No', 'NO', 'nop', 'Nop', 'NOP', 'nope', 'Nope', 'NOPE', 'nah', 'Nah', 'NAH', 'N', 'n']
 print("Welcome to the Callouts Quiz!")
 time.sleep(1)
 print("All answers must be entered in lowercase.")
@@ -35,7 +39,12 @@ else:
     print("No! No!")
     score -= 1
 time.sleep(1)
-print("You're doing good. The next callout is...")
+if score <= 0:
+    print("You're doing poorly.. The next callout is...")
+if score == 2:
+    print("You are doing pretty good!")
+if score >= 0:
+    print("You're doing alright.")
 time.sleep(2)
 print("In the B bombsite, in the top right corner when coming from the back, there is a vehicle right in front of apartments, Counter-Terrorist and Terrorist often hide there from the opposite team or CTs use It to go to apartments. How is that area called?")
 if input() in answer3:
@@ -51,6 +60,7 @@ if input() in answer4:
     score += 2
 else:
     print("That is wrong.")
+    score -= 1
 time.sleep(2)
 print("Let's get on with the quiz.")
 time.sleep(1)
@@ -62,10 +72,28 @@ if input() in answer5:
     score += 1
 else:
     print("Come on, that was an easy one!")
+    score -= 1
+time.sleep(2)
+print("This is a harder one. When coming from CT Spawn to B, in Market/Shop, what is the position which is on top of the fridge agaisnt the wall?")
+if input() in answer6:
+    print("Great job! That is some nice knowledge in callouts.")
+    score += 1
+else:
+    print("Wrong. That is okay though! People don't use this callout that much.")
+    score -= 1
+time.sleep(1)
+print("If you wanna do better now, I'll be kind and give you a tip about the next callouts, BUT, you will lose a score point. Do you want it?")
+if input() in yes:
+    print("Alright! The tip is that the next callouts are on A or entering A. I will notify you when the callouts are not related to A.")
+    score -= 1
+    show_tip_end = True
+if input() in no:
+    print("Sure! Let's get on with the quiz then.")
+time.sleep (3)
 # End of the quiz, there WILL be more questions and answers above though, this is just for the future.
 time.sleep(1)
 print("Good job on doing the quiz! Here is your final score...")
 time.sleep(3)
-print(score + " !")
+print(score)
 if score <= 0:
     print("Yikes, you didn't do very well... You don't have a rank yet. Try again and practice more!")
