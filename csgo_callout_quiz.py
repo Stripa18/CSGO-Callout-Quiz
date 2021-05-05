@@ -1,10 +1,11 @@
 # First ever created and started on 03/04/2021
-# Version 0.5, now the quiz will go on if you fail as a normal quiz will. At the end of the quiz, depending on your score, you will get a rank.
+# Version 0.7: Ranks and more answers.
 # Quiz based on the 2013 videogame Counter-Strike: Global Offensive made by Valve
 # The videogame is a first-person shooter which has different maps, all of which has strategical spots players can be positioned in.
 # Callouts are used to define these spots and to *call out* an enemy's position so that the team can attack and defeat that player.
 # In the quiz, a spot will be described, and the user must enter the name of the callout in lowercase.
 # Callouts from https://totalcsgo.com/callouts/
+# Ranks from https://totalcsgo.com/ranks/
 import time
 score = 0
 show_tip_end = False
@@ -19,6 +20,12 @@ no = ['no', 'No', 'NO', 'nop', 'Nop', 'NOP', 'nope', 'Nope', 'NOPE', 'nah', 'Nah
 answer7 = ['tetris', 'Tetris', 'TETRIS']
 answer8 = ['triple box', 'triple_box', 'Triple box', 'Triple_box', 'TRIPLE_BOX', 'TRIPLE BOX', 'triple', 'Triple', 'TRIPLE', 'triple stack', 'triple_stack', 'Triple stack', 'Triple Stack', 'Triple_stack', 'Triple_Stack', 'TRIPLE STACK', 'TRIPLE_STACK']
 answer9 = []
+answer10 = []
+answer11 = []
+answer12 = []
+answer13 = []
+answer14 = []
+answer15 = []
 print("Welcome to the Callouts Quiz!")
 time.sleep(1)
 print("All answers must be entered in lowercase.")
@@ -133,5 +140,55 @@ time.sleep(1)
 print("Good job on doing the quiz! Here is your final score...")
 time.sleep(3)
 print(score)
+# Printing the rank
+time.sleep(2)
+print("And your rank is...")
+time.sleep(4)
 if score <= 0:
-   print("Yikes, you didn't do very well... You don't have a rank yet. Try again and practice more!")
+    print("Yikes, you didn't do very well... You don't have a rank yet. Try again and practice more!")
+elif score == 1:
+    print("You are Silver I! That's a start but you gotta get better! Try again.")
+elif score == 2:
+    print("You are Silver II! Getting better.")
+elif score == 3:
+    print("You are a Silver III! You are decent with your callouts. Even though, yo should try again to get more experience.")
+elif score == 4:
+    print("You are Silver IV! You are fine, though you should get more knowledge on callouts. Try again.")
+elif score == 5:
+    print("You are a Silver Elite! You are getting better with your callouts, though you need more level. Try again")
+elif score == 6:
+    print("Congratulations! You are Silver Elite Master! You are the best of the worst players. Try again to to improve your score.")
+elif score == 7:
+    print("Welcome to Gold Nova I. You did alright, try again to try to improve your score.")
+elif score == 8:
+    print("Your rank is Gold Nova II! Fun fact: This is the average rank in the game. Good job.")
+elif score == 9:
+    print("You are Gold Nova III! You are getting good, but you have to try to be the best! Try again.")
+elif score == 10:
+    print("Your rank is Gold Nova Master! You are the greatest of the most average. Congratulations. Try again for a better score and be better than most players!")
+elif score == 11:
+    print("You are getting closer to the elite, for now, you are Master Guardian I. You are better than the average, so try again to be even better!")
+elif score == 12:
+    print("Master Guardian II! You are a good player, but you must try again to be even better. Congrats.")
+# Every rank from this point onwards will be bolded, trying to figure that out.
+elif score == 13:
+    print("You are Master Guardian Elite!! You are the best of the better players. The next step is entering the elite ranks. From now, congrats on that callout knowledge.")
+elif score == 14:
+    print("Welcome to the Elite! You are a Distinguished Master Guardian. Good knowledge of the callouts will help YOU and your team assure a win. Try again for an even better rank.")
+elif score == 15:
+    print("You are Legendary Eagle! That is an amazing rank and you should be proud, though, you should try again to get on the level of the pros!")
+elif score == 16:
+    print("You are very close to becoming the best of the best. Your rank is Legendary Eagle Master! Amazing job. You know your callouts pretty well and know the common ones perfectly.")
+elif score == 17:
+    print("Holy moly! Your rank is Supreme Master First Class! You always give good information to your teammates about where the enemies are and know the spots pretty well. Your callout knowledge is almost perfect! Try again If you have the knowledge to be part of... The Global Elite.")
+elif score == 18:
+    print("You...")
+    time.sleep(2)
+    print("...are...")
+    time.sleep(2)
+    print("the greatest!!!")
+    time.sleep(2)
+    print("You are part of the Global Elite. All of your callouts are accurate and precise. You give excellent information to your teammates and won't hesitate about It. You have the ultimate and perfect knowledge about callouts.")
+    time.sleep(3)
+    print("Congratulations my friend, you have completed the Mirage part of the quiz as you know all the answers. What is your name?")
+    print(input() + ", you are the greatest. Congratulations.")
